@@ -2,6 +2,8 @@ package org.dcistudent;
 
 import java.util.ArrayList;
 import java.util.List;
+
+import org.dcistudent.Factories.Models.Responses;
 import org.dcistudent.Models.Person;
 
 public class Main {
@@ -20,6 +22,7 @@ public class Main {
         System.out.println("+++ We are all humans +++");
         System.out.println("-------------------------");
 
+        // Print all persons in a sentence
         main.persons.forEach(person -> sb
             .append(person.getName())
             .append(" is a ")
@@ -30,6 +33,11 @@ public class Main {
         );
 
         System.out.println(sb);
+
+        // Print all persons in JSON format per DTO/Response Object
+        main.persons.forEach(person ->
+            System.out.println(Responses.getPerson().toString(person))
+        );
     }
 
     /**
