@@ -44,11 +44,12 @@ public class Main {
      * Constructor.
      */
     public Main() {
-        this.addPerson(new Person().setName("Alice").setAge(25).setJob("Software Engineer"));
-        this.addPerson(new Person().setName("Bob").setAge(30).setJob("Doctor"));
-        this.addPerson(new Person().setName("Charlie").setAge(35).setJob("Teacher"));
-        this.addPerson(new Person().setName("David").setAge(40).setJob("Lawyer"));
-        this.addPerson(new Person().setName("Eve").setAge(45).setJob("Nurse"));
+        this
+            .addPerson(new Person().setName("Alice").setAge(25).setJob("Software Engineer"))
+            .addPerson(new Person().setName("Bob").setAge(30).setJob("Doctor"))
+            .addPerson(new Person().setName("Charlie").setAge(35).setJob("Teacher"))
+            .addPerson(new Person().setName("David").setAge(40).setJob("Lawyer"))
+            .addPerson(new Person().setName("Eve").setAge(45).setJob("Nurse"));
     }
 
     /**
@@ -56,8 +57,10 @@ public class Main {
      *
      * @param person Add a person
      */
-    public void addPerson(Person person) {
+    public Main addPerson(Person person) {
         this.persons.add(person);
+
+        return this;
     }
 
     /**
@@ -65,8 +68,10 @@ public class Main {
      *
      * @param person Remove a person by object
      */
-    public void removePerson(Person person) {
+    public Main removePerson(Person person) {
         this.persons.remove(person);
+
+        return this;
     }
 
     /**
@@ -74,8 +79,10 @@ public class Main {
      *
      * @param index Remove a person by index
      */
-    public void removePerson(int index) {
+    public Main removePerson(int index) {
         this.persons.remove(index);
+
+        return this;
     }
 
     /**
