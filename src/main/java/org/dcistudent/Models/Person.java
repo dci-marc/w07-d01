@@ -1,9 +1,9 @@
 package org.dcistudent.Models;
 
 public class Person extends Human {
-    private String name;
-    private int age;
-    private String job;
+    private String name = "";
+    private int age = 0;
+    private String job = "";
 
     /**
      * Set the person's name.
